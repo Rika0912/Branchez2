@@ -1,0 +1,494 @@
+/* ========== HOME PAGE STYLES ========== */
+.home-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.header.scrolled {
+    background-color: rgba(13, 13, 13, 0.9);
+}
+
+.header-logo img {
+width: 250px;
+height: 80px;
+opacity: 1;
+top: 17px;
+left: 65px;
+
+}
+
+/* Navigation Styles */
+.navbar {
+    display: flex;
+    gap: 30px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar .nav-item {
+    color: #7D7B7B;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+}
+
+.navbar .nav-item.active {
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+
+.navbar .nav-item:hover:not(.active) {
+    color: #99CA3C;
+    text-decoration: underline;
+}
+
+.navbar .nav-item.active:hover {
+    transform: scale(0.9);
+}
+
+/* Mobile Navigation Elements */
+.mobile-nav-toggle, .mobile-login-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    /* Remove the float: left from here */
+}
+
+.mobile-nav-toggle {
+    order: -1;
+    margin-right: 15px; /* Adjust as needed */
+}
+
+.mobile-login-icon {
+    order: 2;
+    margin-left: 0; /* Explicitly set left margin to 0 */
+    margin-right: auto; /* This helps with left alignment */
+}
+
+/* Login Button */
+.login-button {
+    background-color: #0D0D0D;
+    border: 1px solid #99CA3C;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.login-button .login-icon {
+    height: 16px;
+    transition: opacity 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: white;
+    color: #99CA3C;
+}
+
+.login-button:hover .login-icon {
+    opacity: 0;
+}
+
+.login-button:hover::after {
+    content: "→";
+    font-size: 18px;
+}
+
+/* Mobile Navigation Overlay */
+.mobile-nav-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    background-color: rgba(13, 13, 13, 0.95);
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.mobile-nav-logo {
+    max-width: 120px;
+    height: auto;
+}
+
+.closebtn {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.mobile-nav-item{
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    
+}
+
+.mobile-nav-item:hover {
+    color: #99CA3C;
+}
+
+/* --- General Footer Styles --- */
+.footer {
+    background-color: #0D0D0D;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    width: 100%; /* Ensure footer takes full width */
+    max-width: 100%; /* Prevent horizontal overflow */
+    overflow-x: hidden; /* Hide potential horizontal scrollbar */
+
+    /* --- Desktop/Laptop Layout (Default Grid) --- */
+    display: grid;
+    /* Define 3 columns for the top row (logo, nav, social)
+       and then span the bottom row across these 3 columns. */
+    grid-template-columns: 1fr 2fr 1fr; /* Adjust column widths as needed */
+    grid-template-rows: auto auto; /* Two rows, auto height */
+    grid-template-areas:
+        "logo-area nav-area social-area"
+        "contact-group-area contact-group-area contact-group-area"; /* Spans across all 3 columns */
+    
+    /* Align items within their grid areas */
+    align-items: center; /* Vertically center items in their rows */
+    justify-items: center; /* Horizontally center items in their columns */
+    gap: 30px 20px; /* Row gap, Column gap */
+
+}
+
+/* --- Assign Grid Areas to HTML Elements --- */
+.footer-logo-container {
+    grid-area: logo-area;
+    display: flex; /* Use flex to center the logo image */
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-nav {
+    grid-area: nav-area;
+    display: flex; /* Use flex for nav links */
+    justify-content: center; /* Center nav links horizontally */
+    gap: 25px; /* Space between nav links */
+}
+
+.social-media-icons-container {
+    grid-area: social-area;
+    display: flex; /* Use flex to center social icons */
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-details-group {
+    grid-area: contact-group-area;
+    display: flex; /* Use flex to arrange phone, location, email horizontally */
+    justify-content: space-around; /* Distribute space evenly */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow items to wrap if screen is too narrow */
+    width: 100%; /* Take full width of its grid area */
+    max-width: 800px; /* Constrain width of this group for better readability */
+    margin: 0 auto; /* Center the group if it's narrower than its grid area */
+    padding-top: 20px; /* Space between top row and this row */
+}
+
+/* --- Individual Element Styling --- */
+.footer-logo {
+    max-width: 180px; /* Adjust logo size for desktop */
+    height: auto;
+}
+
+.footer-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #91CC1F;
+}
+
+/* Social Media Icons (from previous code) */
+.social-media-icons {
+    display: flex;
+    gap: 15px;
+}
+.social-media-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.social-media-icons a img {
+    height: 20px;
+    width: auto;
+}
+.social-media-icons a:hover {
+    background-color: #0D0D0D;
+}
+.social-media-icons a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* Contact Info (phone, location, email) */
+.contact-info,
+.location-info,
+.email-info {
+    flex: 1; /* Allow these items to grow/shrink within contact-details-group */
+    min-width: 200px; /* Minimum width before wrapping */
+    padding: 10px; /* Padding around each contact block */
+    box-sizing: border-box;
+    text-align: center; /* Center text within each block */
+}
+
+.contact-info p,
+.location-info p,
+.email-info p {
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center icon and text horizontally */
+    gap: 5px; /* Space between icon and text */
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #FFFFFF;
+}
+
+/* Font Awesome Icon Styling  */
+.contact-info .fas,
+.location-info .fas,
+.email-info .fas {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    color: #0D0D0D;
+    font-size: 18px;
+    margin-bottom: 5px; /* Space between icon and text below it */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-info .fas:hover,
+.location-info .fas:hover,
+.email-info .fas:hover {
+    background-color: #0D0D0D;
+    color: #FFFFFF;
+}
+
+
+/* --- Responsive Adjustments (Tablet & Mobile) --- */
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed for tablet/mobile */
+    .footer {
+        grid-template-columns: 1fr; /* Single column layout for mobile/tablet */
+        grid-template-rows: auto auto auto auto; /* Four rows */
+        grid-template-areas:
+            "nav-area"
+            "social-area"
+            "contact-group-area"
+            "logo-area"; /* Reordered as per your request */
+        
+        justify-items: center; /* Center everything horizontally in the single column */
+        gap: 30px 0; /* Adjust gaps for vertical stacking */
+        padding: 30px 15px; /* Adjust padding for smaller screens */
+    }
+
+    /* Ensure all main sections are centered */
+    .footer-logo-container,
+    .footer-nav,
+    .social-media-icons-container {
+        width: 100%; /* Take full width of the single column */
+        text-align: center; /* Center text content */
+        justify-content: center; /* Center flex items if they are flex containers */
+        align-items: center; /* Center flex items if they are flex containers */
+    }
+
+    /* Specific adjustments for elements within their new mobile layout */
+    .footer-nav {
+        flex-direction:row; /* Stack nav links vertically */
+        gap: 15px; /* Space between stacked nav links */
+    }
+    .footer-nav a {
+        font-size: 18px; /* Slightly larger nav links for mobile */
+    }
+
+    .social-media-icons {
+        justify-content: center; /* Ensure social icons group is centered */
+    }
+
+    .contact-details-group {
+        flex-direction: row; /* Stack phone, location, email vertically */
+        gap: 20px; /* Space between stacked contact blocks */
+        border-top: none; /* Remove separator line on mobile if desired */
+        padding-top: 0;
+    }
+
+    .footer-logo {
+        max-width: 150px; /* Adjust logo size for mobile */
+    }
+
+    /* Further reduce font and icon sizes for very small screens if needed */
+    .contact-info p,
+    .location-info p,
+    .email-info p {
+        font-size: 14px;
+    }
+    .contact-info .fas,
+    .location-info .fas,
+    .email-info .fas,
+    .social-media-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    .social-media-icons a img {
+        height: 16px;
+    }
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 15px 3%; /* Adjust header padding */
+    }
+    .header-logo img {
+        max-width: 120px; /* Smaller logo on tablets */
+    }
+    .navbar {
+        gap: 20px; /* Reduce nav item gap */
+    }
+    .navbar .nav-item {
+        font-size: 1em; /* Smaller nav font size */
+    }
+    .login-button {
+        padding: 8px 15px; /* Smaller login button */
+        font-size: 1em;
+    }
+
+    .blogs-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .blogs-description {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .blog-card {
+        width: calc(50% - 15px); /* Two cards per row with gap */
+        height: 280px; /* Adjust height for tablets */
+    }
+    .blog-card-text {
+        font-size: 18px;
+    }
+    .blog-card-overlay .overlay-text {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .navbar,
+    .login-button,.header-logo img {
+        display: none; /* Hide desktop nav and login button */
+    }
+    
+    .mobile-nav-toggle, .mobile-login-icon {
+        display: block; /* Show mobile elements */
+    }
+    
+    .header {
+        padding: 15px; /* Adjust header padding for mobile */
+    }
+    
+    .blogs-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .blogs-description {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .blog-card {
+        width: 90%; /* Single card per row on mobile */
+        height: 250px; /* Adjust height for mobile */
+    }
+    .blog-card-text {
+        font-size: 16px;
+    }
+    .blog-card-overlay .overlay-text {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    
+    .blogs-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .blogs-description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .blog-card {
+        width: 95%; /* Make cards almost full width */
+        height: 220px; /* Further adjust height */
+    }
+    .blog-card-text {
+        font-size: 14px;
+    }
+    .blog-card-overlay .overlay-text {
+        font-size: 12px;
+    }
+
+}

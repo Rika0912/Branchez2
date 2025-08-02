@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="blogpagestyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles to match the design */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #0D0D0D;
+            color: #E5E5E5;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: #E5E5E5;
+        }
+        .hero-section {
+            background-image: url('https://placehold.co/1920x800/262626/E5E5E5?text=Blog+Hero+Image'); /* Placeholder image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .green-accent {
+            color: #99CA3C;
+        }
+        .green-accent-bg {
+            background-color: #99CA3C;
+        }
+        /* Custom scrollbar for the table of contents */
+        .toc-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .toc-container::-webkit-scrollbar-track {
+            background: #2D2D2D;
+            border-radius: 10px;
+        }
+        .toc-container::-webkit-scrollbar-thumb {
+            background: #99CA3C;
+            border-radius: 10px;
+        }
+        .toc-container::-webkit-scrollbar-thumb:hover {
+            background: #84b434;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-page-wrapper">
+        <!-- Header Section -->
+        <header class="header">
+            <!-- Logo -->
+            <div class="header-logo">
+                <img src="LogoColoredwhite1.png" alt="Branchez Logo">
+            </div>
+
+            <!-- Mobile Login Icon -->
+            <div class="mobile-login-icon" id="mobileLoginIcon">
+                <p> Blogs</p>
+            </div>
+
+            <!-- Mobile Navigation Toggle -->
+            <div class="mobile-nav-toggle" id="mobileNavToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Desktop Navigation and Login -->
+            <nav class="navbar" id="myNavbar">
+                <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\home.html" class="nav-item">Home</a>
+                <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\Services\services.html" class="nav-item">Services</a>
+                <a href="blogs.html" class="nav-item active">Blogs</a>
+                <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\Team\about.html" class="nav-item">About</a>
+                <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\Team\contact.html" class="nav-item">Contact Us</a>
+            </nav>
+
+            <button class="login-button" id="loginButton">
+                <span>Log in</span>
+                <img src="Frame.png" alt="Login Icon" class="login-icon">
+            </button>
+        </header>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobileNavOverlay">
+            <div class="mobile-nav-header">
+                <img src="Logo White 4.png" alt="Mobile Logo" class="mobile-nav-logo">
+                <div class="closebtn" id="closeMobileNav">&times;</div>
+            </div>
+            <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\home.html" class="mobile-nav-item active">Home</a>
+            <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\Services\services.html" class="mobile-nav-item">Services</a>
+            <a href="blogs.html" class="mobile-nav-item">Blogs</a>
+            <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\Team\about.html" class="mobile-nav-item">About</a>
+            <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\Team\contact.html" class="mobile-nav-item">Contact Us</a>
+        </div>
+
+           <!-- Main Content Area (Body) -->
+    
+          <div class="overlay absolute inset-0"></div>
+        <div class="container mx-auto px-4 py-8 relative z-10 text-center md:text-left">
+            <!-- "Added to Favorites" button -->
+            <button id="favorite-btn" class="absolute top-4 right-4 md:top-8 md:right-8 bg-black bg-opacity-50 text-white rounded-full p-3 transition-colors duration-300 hover:bg-opacity-80">
+                <i id="favorite-icon" class="fa-regular fa-heart text-xl green-accent"></i>
+            </button>
+            <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-2 max-w-4xl mx-auto md:mx-0">
+                Mastering ChatGPT Blog Creation: Dos and Don'ts for SaaS Marketing Managers
+            </h1>
+            <p class="text-sm md:text-base text-gray-300">
+                <span class="font-semibold green-accent">Oct 19</span> by <span class="font-semibold">Ahmed</span>
+            </p>
+        </div>
+        
+    <main class="container mx-auto px-4 py-12 md:py-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Left Div: Blog Article Content -->
+        <article class="lg:col-span-2 space-y-8">
+            <div>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4" id="exploring-ai-content">Exploring Generative AI In Content Creation</h2>
+                <p class="text-base text-gray-300 leading-relaxed mb-4">
+                    Hello there! As a marketing manager in the SaaS industry, you might be looking for innovative ways to engage your audience. Using generative AI has crossed your mind as an option for creating content. Well, let me share from my firsthand experience.
+                </p>
+                <p class="text-base text-gray-300 leading-relaxed mb-4">
+                    Google encourages high-quality blogs regardless of whether they're written by humans or created using artificial intelligence like ChatGPT. What matters is producing original material with expertise and trustworthiness based on Google E-E-A-T principles.
+                </p>
+                <p class="text-base text-gray-300 leading-relaxed">
+                    This means focusing more on people-first writing rather than primarily employing AI tools to manipulate search rankings. There comes a time when many experienced professionals want to communicate their insights but get stuck due to limited writing skills - that's where Generative AI can step in.
+                </p>
+            </div>
+            
+            <div>
+                <h2 class="text-2xl md:text-3xl font-bold mt-8 mb-4" id="sharing-insights">Sharing Clear of Common AI Writing Pitfalls</h2>
+                <p class="text-base text-gray-300 leading-relaxed">
+                    So, together, we're going to explore how this technology could help us deliver valuable content without sounding robotic or delaying it due to the limitations of existing materials (spoiler alert - common pitfalls). Hang tight - it'll be a fun learning journey!
+                </p>
+            </div>
+            
+            <div>
+                <h2 class="text-2xl md:text-3xl font-bold mt-8 mb-4" id="understanding-chatgpt-capabilities">Understanding ChatGPT Capabilities - Define Your Scope</h2>
+                <p class="text-base text-gray-300 leading-relaxed">
+                    Jumping headfirst into using AI like ChatGPT without a content strategy can lead to some unfortunate results. One common pitfall I've seen is people opting for quantity over quality - they churn out blogs, but each one feels robotic and soulless.
+                </p>
+            </div>
+        </article>
+
+        <!-- Right Div: Sidebar -->
+        <aside class="lg:col-span-1 space-y-12">
+            <!-- Share Section -->
+            <div class="p-6 rounded-lg bg-gray-800 shadow-lg">
+                <h3 class="text-lg font-bold mb-4">Share with your community!</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full green-accent-bg text-black transition-transform duration-300 hover:scale-110">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full green-accent-bg text-black transition-transform duration-300 hover:scale-110">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full green-accent-bg text-black transition-transform duration-300 hover:scale-110">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full green-accent-bg text-black transition-transform duration-300 hover:scale-110">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- In this article Section (Main Points) -->
+            <div class="p-6 rounded-lg bg-gray-800 shadow-lg">
+                <h3 class="text-lg font-bold mb-4">In this article</h3>
+                <div class="toc-container max-h-64 overflow-y-auto space-y-2">
+                    <a href="#exploring-ai-content" class="block text-gray-400 hover:text-white transition-colors duration-200">
+                        Exploring Generative AI In Content Creation
+                    </a>
+                    <a href="#sharing-insights" class="block text-gray-400 hover:text-white transition-colors duration-200">
+                        Sharing Clear of Common AI Writing Pitfalls
+                    </a>
+                    <a href="#understanding-chatgpt-capabilities" class="block text-gray-400 hover:text-white transition-colors duration-200">
+                        Understanding ChatGPT Capabilities - Define Your Scope
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Related Articles Section -->
+    <section class="container mx-auto px-4 py-12 md:py-16">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8">Related Articles</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Article Card 1 -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <img src="https://placehold.co/400x250/262626/E5E5E5?text=Article+Image+1" alt="Article Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="inline-block bg-green-accent-bg text-black text-xs font-semibold px-2 py-1 rounded-full mb-3">Artificial Intelligence</span>
+                    <h4 class="text-lg font-semibold mb-2">How to write Articles with A.P and find your Unique Perspective</h4>
+                    <p class="text-sm text-gray-400">Oct 16 by Ahmed</p>
+                </div>
+            </div>
+            <!-- Article Card 2 -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <img src="https://placehold.co/400x250/262626/E5E5E5?text=Article+Image+2" alt="Article Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="inline-block bg-green-accent-bg text-black text-xs font-semibold px-2 py-1 rounded-full mb-3">Artificial Intelligence</span>
+                    <h4 class="text-lg font-semibold mb-2">How to write Articles with A.P and find your Unique Perspective</h4>
+                    <p class="text-sm text-gray-400">Oct 16 by Ahmed</p>
+                </div>
+            </div>
+            <!-- Article Card 3 -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <img src="https://placehold.co/400x250/262626/E5E5E5?text=Article+Image+3" alt="Article Image" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="inline-block bg-green-accent-bg text-black text-xs font-semibold px-2 py-1 rounded-full mb-3">Artificial Intelligence</span>
+                    <h4 class="text-lg font-semibold mb-2">How to write Articles with A.P and find your Unique Perspective</h4>
+                    <p class="text-sm text-gray-400">Oct 16 by Ahmed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+           <!-- Footer Section -->
+    <footer class="footer">
+    <div class="footer-logo-container">
+        <img src="Logo White 5.png" alt="Branchez Logo" class="footer-logo">
+    </div>
+
+    <nav class="footer-nav">
+        <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\home.html">Home</a>
+        <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\Services\services.html">Services</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\Team\about.html">About</a>
+        <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\Team\contact.html">Contact Us</a>
+    </nav>
+
+    <div class="social-media-icons-container">
+        <div class="social-media-icons">
+            <a href="https://www.linkedin.com/company/brancherz" aria-label="LinkedIn"><img src="1 (2).png"></a>
+            <a href="https://www.linkedin.com/company/brancherz" aria-label="Facebook"><img src="2 (2).png"></a>
+            <a href="#" aria-label="Instagram"><img src="3 (2).png"></a>
+        </div>
+    </div>
+
+    <div class="contact-details-group">
+        <div class="contact-info">
+            <p><i class="fas fa-phone-alt"></i> +971 52147 1307 <br> +20 3 4229558 </p>
+        </div>
+        <div class="location-info">
+            <p><i class="fas fa-map-marker-alt"></i> Dubai, UAE <br> Alex, Egypt</p>
+        </div>
+        <div class="email-info">
+            <p><i class="fas fa-envelope"></i> Business Inquiry: <br> info@brancherz.com</p>
+        </div>
+    </div>
+    </footer>
+    </div>
+ <!-- JavaScript for interactivity -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Functionality for the "Added to Favorites" button
+            const favoriteBtn = document.getElementById('favorite-btn');
+            const favoriteIcon = document.getElementById('favorite-icon');
+
+            favoriteBtn.addEventListener('click', () => {
+                if (favoriteIcon.classList.contains('fa-regular')) {
+                    favoriteIcon.classList.remove('fa-regular');
+                    favoriteIcon.classList.add('fa-solid');
+                    favoriteBtn.classList.add('bg-green-accent');
+                    favoriteBtn.classList.remove('bg-black', 'bg-opacity-50');
+                    favoriteIcon.classList.remove('green-accent');
+                } else {
+                    favoriteIcon.classList.remove('fa-solid');
+                    favoriteIcon.classList.add('fa-regular');
+                    favoriteBtn.classList.remove('bg-green-accent');
+                    favoriteBtn.classList.add('bg-black', 'bg-opacity-50');
+                    favoriteIcon.classList.add('green-accent');
+                }
+            });
+
+            // Smooth scrolling for "In this article" links
+            document.querySelectorAll('.toc-container a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
